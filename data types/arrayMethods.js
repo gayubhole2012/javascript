@@ -197,9 +197,12 @@ console.log(output4);//{ '26': 2, '50': 1, '75': 1 }
 const output5 = users2.filter((x) => x.age < 30).map((x) => x.firstName);
 console.log(output5);//[ 'Sally', 'Lidiya' ]
 
-const output6 = users2.reduce(function(obj,value){
-    obj[value.age] = value;
-    return obj
-},{})
-    
+
+const output6 = users2.reduce(function(acc4, curr4){
+    if(curr4.age < 30 ){
+    acc4.push(curr4.firstName)
+    }
+return acc4;
+}, [])
 console.log(output6);
+// [ 'Sally', 'Lidiya' ]

@@ -83,3 +83,27 @@ console.log(set.size);//3
 for(let user of set){
     console.log(user.name);//John  Pete  Mary
 }
+
+//plain object follwing methods
+//Object.key(obj)- retruns an array of key
+//Object.values(obj) - retruns an array of values
+//Object.entreis(obj) - retruns an array of[key,value] pair
+
+let user2 = {
+    name:'Sona',
+    age: 30
+};
+for(let value of Object.values(user2)){
+    console.log(value);//Sona  30
+}
+
+//Objects lack many methods that exist for arrays, e.g. map, filter and others.
+let prices = {
+    banana: 1,
+    orange: 2,
+    meat: 4
+};
+let doublePrises = Object.fromEntries(
+    Object.entries(prices).map(entry=> [entry[0], entry[1] * 2])
+);
+console.log(doublePrises);//{ banana: 2, orange: 4, meat: 8 }

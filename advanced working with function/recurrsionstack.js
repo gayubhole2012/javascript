@@ -19,37 +19,6 @@ function fact(n){
     let result = fact(num2);
     console.log(result);//120
 
-//
-let list = {
-    value:1,
-    next:{
-        value:2,
-        next:{
-            value:3,
-            next:{
-            value:4,
-            next:null,
-            value:5,
-            next:{
-                value:6,
-                next:{
-
-                  }
-                  }
-            }
-        }
-    }
-};
-
-function printList(list){
- // console.log(list.value);
-  if(list.next){
-    printList(list.next);
-  }
-  console.log(list.value);
-  }
-printList(list);
-
 //sunTo(n)
 function sumTo(n){
     if(n == 1)return 1;
